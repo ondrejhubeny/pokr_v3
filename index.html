@@ -3,390 +3,346 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pivnice Pizza POKR Znojmo | Hvězda sládků, pizza, burgery &amp; catering</title>
-  <meta name="description" content="Pivnice Pizza POKR ve Znojmě v nově zrekonstruovaných prostorách. Pivo oceněné Hvězdou sládků, poctivá pizza, burgery, řízky, fokáče, kulečník, šipky, fotbálek a catering na akce.">
+  <title>POKR Znojmo — Pivnice, Pizza, Burgery, Hry &amp; Catering</title>
+  <meta name="description" content="Pivnice Pizza POKR ve Znojmě v novém kabátě. Hvězda sládků na čepu, pizza, burgery, řízky, fokáče, kulečník, šipky, fotbálek a catering pro soukromé akce.">
   <link rel="icon" type="image/png" href="assets/logo-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navigace -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Pivnice Pizza POKR – domů">
-        <img src="assets/logo-white.png" alt="POKR Pivnice-Pizza" class="brand-logo">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="logo-link" aria-label="POKR Pivnice-Pizza">
+        <img src="assets/logo-white.png" alt="POKR Pivnice-Pizza">
       </a>
 
-      <nav class="nav-desktop" aria-label="Hlavní navigace">
-        <a href="#o-nas">Po rekonstrukci</a>
-        <a href="#menu">Menu &amp; Pivo</a>
-        <a href="#zabava">Kulečník &amp; Zábava</a>
+      <nav class="nav" aria-label="Hlavní navigace">
+        <a href="#prostory">Prostory &amp; Hry</a>
+        <a href="#tabule">Menu Tabule</a>
         <a href="#catering">Catering &amp; Akce</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <div class="header-actions">
-        <span class="open-pill" id="openStatus" aria-live="polite">
-          <span class="dot"></span>
-          <span class="open-pill-text">Dnes od 15:00</span>
-        </span>
-        <a href="#catering" class="btn btn-crimson btn-sm">Rezervace &amp; Akce</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Otevřít menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="topbar-right">
+        <a href="tel:+420608822342" class="phone-tag">+420 608 822 342</a>
+        <a href="#catering" class="cta-btn cta-ember">Poptat akci</a>
+        <button class="nav-btn" id="navBtn" aria-label="Otevřít navigaci" aria-expanded="false">MENU</button>
       </div>
+    </div>
+    <div class="drawer" id="drawer" hidden>
+      <a href="#prostory">Prostory &amp; Hry</a>
+      <a href="#tabule">Menu Tabule</a>
+      <a href="#catering">Catering &amp; Akce</a>
+      <a href="#kontakt">Kontakt &amp; Mapa</a>
+      <a href="tel:+420608822342" class="cta-btn cta-ember">Zavolat: +420 608 822 342</a>
     </div>
   </header>
 
-  <!-- Mobilní menu -->
-  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-    <nav class="mobile-nav">
-      <a href="#o-nas">Po rekonstrukci</a>
-      <a href="#menu">Menu &amp; Pivo</a>
-      <a href="#zabava">Kulečník &amp; Zábava</a>
-      <a href="#catering">Catering &amp; Akce</a>
-      <a href="#kontakt">Kontakt &amp; Mapa</a>
-      <a href="tel:+420608822342" class="btn btn-crimson">Zavolat: +420 608 822 342</a>
-    </nav>
-  </div>
-
   <main id="top">
-    <!-- Hero sekce -->
+    <!-- Bold Poster Hero -->
     <section class="hero">
-      <div class="hero-media">
-        <img src="assets/hero-beer.jpg" alt="Čerstvě načepované zlaté pivo s krémovou pěnou v Pivnici POKR">
-        <div class="hero-overlay"></div>
-      </div>
-
-      <div class="container hero-content">
-        <div class="hero-badges reveal">
-          <span class="award-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
-            Držitel ocenění Hvězda sládků
-          </span>
-          <span class="tag-pill"><span class="red-dot"></span>Nově zrekonstruováno • Znojmo</span>
-        </div>
-
-        <h1 class="hero-title reveal">
-          Poctivé pivo, křupavá pizza<br>
-          <em>a nový rozměr večera ve Znojmě.</em>
-        </h1>
-
-        <p class="hero-lead reveal">
-          Vítejte v nově zrekonstruované Pivnici Pizza POKR. Čepujeme pivo oceněné Hvězdou sládků,
-          pečeme pizzy i voňavé fokáče, grilujeme šťavnaté burgery a smažíme poctivé řízky.
-          Přijďte na dokonale načepovanou hladinku s přáteli, partičku kulečníku nebo uspořádejte oslavu s naším cateringem.
-        </p>
-
-        <div class="hero-cta reveal">
-          <a href="#menu" class="btn btn-crimson btn-lg">Prohlédnout jídelní lístek</a>
-          <a href="#catering" class="btn btn-outline-light btn-lg">Poptat akci nebo catering</a>
-        </div>
-
-        <div class="hero-metrics reveal">
-          <div class="metric">
-            <span class="metric-value">Hvězda sládků</span>
-            <span class="metric-label">Špičková péče o čepované pivo</span>
+      <div class="wrap hero-grid">
+        <div class="hero-left">
+          <div class="status-line">
+            <span class="star-chip">★ HVĚZDA SLÁDKŮ</span>
+            <span class="mono-chip">ZNOJMO // NOVĚ ZREKONSTRUOVÁNO</span>
           </div>
-          <div class="metric">
-            <span class="metric-value">Nový interiér</span>
-            <span class="metric-label">Čerstvě po kompletní rekonstrukci</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">Kulečník &amp; hry</span>
-            <span class="metric-label">Šipky, fotbálek i zázemí pro akce</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">Pod Soudním vrchem</span>
-            <span class="metric-label">Znojmo • denně od 15:00</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Po rekonstrukci / Příběh -->
-    <section class="section section-story" id="o-nas">
-      <div class="container story-grid">
-        <div class="story-media reveal">
-          <div class="media-frame main-frame">
-            <img src="assets/interior-renovated.jpg" alt="Nově zrekonstruovaný interiér Pivnice Pizza POKR">
-            <span class="frame-caption">Nově zrekonstruované prostory</span>
-          </div>
-          <div class="media-frame secondary-frame">
-            <img src="assets/bar-bw.jpg" alt="Klasická atmosféra výčepu Pivnice POKR">
-            <span class="frame-caption">Duše znojemské pivnice</span>
-          </div>
-        </div>
+          <h1>
+            PIVNICE.<br>
+            PIZZA.<br>
+            <span class="accent">NOVÝ POKR.</span>
+          </h1>
 
-        <div class="story-text reveal">
-          <span class="eyebrow">Nová kapitola POKRu</span>
-          <h2 class="section-title">Tradiční znojemská pohostinnost v čerstvě zrekonstruovaném kabátě</h2>
-          <p>
-            Pivnice Pizza POKR prošla velkou proměnou. Zrekonstruovali jsme naše prostory tak, aby spojovaly
-            útulnou atmosféru moderní pivnice, špičkový výčep a dostatek místa pro večerní posezení,
-            oslavy i firemní akce.
-          </p>
-          <p>
-            Na čepu si zakládáme na každém detailu — správné teplotě, dokonale čistém skle a krémové pěně.
-            Právě proto se pyšníme prestižním oceněním <strong>Hvězda sládků</strong>. K perfektnímu pivu pak
-            patří kuchyně, která nešidí porce ani suroviny.
+          <p class="hero-copy">
+            Nově zrekonstruovaný podnik Pod Soudním vrchem. Na čepu pivo oceněné
+            <strong>Hvězdou sládků</strong>, z kuchyně jedou křupavé pizzy, poctivé burgery,
+            zlatavé řízky a teplé fokáče. K tomu kulečník, šipky, fotbálek a catering pro vaše akce.
           </p>
 
-          <div class="pillars">
-            <div class="pillar">
-              <div class="pillar-icon">★</div>
-              <div>
-                <h3>Hvězda sládků na čepu</h3>
-                <p>Pravidelně kontrolovaná kvalita výčepního systému, ideální chlazení a poctivá hladinka.</p>
-              </div>
+          <div class="hero-btns">
+            <a href="#tabule" class="cta-btn cta-ember cta-big">Otevřít menu tabuli →</a>
+            <a href="#catering" class="cta-btn cta-ghost cta-big">Naplánovat akci / catering</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>HVĚZDA SLÁDKŮ</strong>
+              <span>Špičková kvalita čepovaného piva</span>
             </div>
-            <div class="pillar">
-              <div class="pillar-icon pillar-icon-red">✦</div>
-              <div>
-                <h3>Kuchyně od pece po gril</h3>
-                <p>Křupavé pizzy, domácí fokáče, šťavnaté burgery, zlatavé řízky a speciality na prkně.</p>
-              </div>
+            <div>
+              <strong>3 HERNÍ ZÓNY</strong>
+              <span>Kulečník • Šipky • Fotbálek</span>
             </div>
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <div>
-                <h3>Akce, hry &amp; catering</h3>
-                <p>Soukromé oslavy v našich prostorách s kulečníkem, šipkami a fotbálkem – i catering na míru.</p>
-              </div>
+            <div>
+              <strong>DENNĚ OD 15:00</strong>
+              <span>Pá–So otevřeno až do 03:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="poster-card poster-main">
+            <img src="assets/hero-beer.jpg" alt="Zlaté pivo s krémovou pěnou v Pivnici POKR">
+            <div class="poster-label">01 // HVĚZDA SLÁDKŮ NA ČEPU</div>
+          </div>
+          <div class="poster-subgrid">
+            <div class="poster-card">
+              <img src="assets/interior-renovated.jpg" alt="Zrekonstruovaný interiér POKR Znojmo">
+              <div class="poster-label">02 // NOVÝ INTERIÉR</div>
+            </div>
+            <div class="poster-card poster-mono">
+              <img src="assets/bar-bw.jpg" alt="Výčep a atmosféra Pivnice POKR">
+              <div class="poster-label">03 // ZNOJEMSKÁ KLASIKA</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Menu & Pivo -->
-    <section class="section section-menu" id="menu">
-      <div class="container">
-        <div class="section-header reveal">
+    <!-- Marquee Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>★ HVĚZDA SLÁDKŮ</span>
+        <span>•</span>
+        <span>NOVĚ ZREKONSTRUOVANÉ PROSTORY</span>
+        <span>•</span>
+        <span>PIZZA &amp; FOKÁČE</span>
+        <span>•</span>
+        <span>BURGERY &amp; ŘÍZKY</span>
+        <span>•</span>
+        <span>KULEČNÍK • ŠIPKY • FOTBÁLEK</span>
+        <span>•</span>
+        <span>CATERING &amp; SOUKROMÉ AKCE</span>
+        <span>•</span>
+        <span>POD SOUDNÍM VRCHEM, ZNOJMO</span>
+        <span>•</span>
+        <span>★ HVĚZDA SLÁDKŮ</span>
+        <span>•</span>
+        <span>NOVĚ ZREKONSTRUOVANÉ PROSTORY</span>
+        <span>•</span>
+        <span>PIZZA &amp; FOKÁČE</span>
+        <span>•</span>
+        <span>BURGERY &amp; ŘÍZKY</span>
+        <span>•</span>
+        <span>KULEČNÍK • ŠIPKY • FOTBÁLEK</span>
+        <span>•</span>
+        <span>CATERING &amp; SOUKROMÉ AKCE</span>
+        <span>•</span>
+        <span>POD SOUDNÍM VRCHEM, ZNOJMO</span>
+        <span>•</span>
+      </div>
+    </div>
+
+    <!-- Světlý kontrastní blok: Prostory, rekonstrukce & hry -->
+    <section class="section-light" id="prostory">
+      <div class="wrap">
+        <div class="section-top">
           <div>
-            <span class="eyebrow">Jídelní &amp; nápojový lístek</span>
-            <h2 class="section-title">Co pro vás chystáme na výčepu i v kuchyni</h2>
+            <span class="eyebrow">01 // NOVÝ ROZMĚR PODNIKU</span>
+            <h2>ZREKONSTRUOVANÝ PROSTOR,<br>KDE TO ŽIJE DO NOCI.</h2>
           </div>
-          <p class="section-sub">
-            Ukázka naší stálé nabídky. Připravujeme vše čerstvé na objednávku — k posezení v pivnici,
-            s sebou i na rozvoz přes Wolt a Foodoru.
+          <p class="section-note">
+            Spojili jsme poctivou českou pivnici s moderním klubovým zázemím.
+            Čistý interiér po rekonstrukci, perfektní pivo, plné talíře a zábava pro celou partu.
           </p>
         </div>
 
-        <div class="menu-showcase reveal">
-          <div class="menu-photo">
-            <img src="assets/food-pizza-focaccia.jpg" alt="Čerstvě upečená pizza a domácí fokáč s rozmarýnem">
-          </div>
-          <div class="menu-photo">
-            <img src="assets/food-burger-schnitzel.jpg" alt="Šťavnatý burger s hranolky a zlatavý smažený řízek">
-          </div>
-        </div>
+        <div class="club-grid">
+          <article class="club-card club-wide">
+            <img src="assets/interior-renovated.jpg" alt="Moderně zrekonstruovaný interiér pivnice">
+            <div class="club-card-body">
+              <span class="card-num">A // INTERIÉR PO REKONSTRUKCI</span>
+              <h3>Nový kabát, větší komfort pro oslavy i běžné pivo</h3>
+              <p>Moderní sezení, dřevo, teplé světlo a dostatek prostoru pro menší stoly i velké soukromé akce.</p>
+            </div>
+          </article>
 
-        <div class="menu-tabs reveal" role="tablist" aria-label="Kategorie menu">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-category="pivo">Na čepu</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-category="pizza">Pizzy</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-category="burgery">Burgery</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-category="rizky">Řízky &amp; Maso</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-category="fokace">Fokáče &amp; K pivu</button>
-        </div>
+          <article class="club-card">
+            <img src="assets/food-pizza-focaccia.jpg" alt="Pizza a domácí fokáč">
+            <div class="club-card-body">
+              <span class="card-num">B // PEC &amp; PEČIVO</span>
+              <h3>Křupavá pizza &amp; horké fokáče</h3>
+              <p>Čerstvě vytažené z pece — od klasiky po náš pikantní POKR speciál a česnekový fokáč.</p>
+            </div>
+          </article>
 
-        <div class="menu-grid reveal" id="menuGrid"></div>
+          <article class="club-card">
+            <img src="assets/food-burger-schnitzel.jpg" alt="Burger a smažený řízek">
+            <div class="club-card-body">
+              <span class="card-num">C // POCTIVÁ KUCHYNĚ</span>
+              <h3>Burgery, řízky &amp; maso na prkně</h3>
+              <p>Šťavnaté hovězí burgery, zlatavé řízky i pečená žebra a kolena, co skvěle sednou k pivu.</p>
+            </div>
+          </article>
 
-        <div class="menu-footer-note reveal">
-          <p>* Ceny a konkrétní sezónní speciality na čepu se mohou průběžně měnit podle aktuální nabídky v pivnici.</p>
-          <div class="delivery-links">
-            <span>Rozvoz po Znojmě:</span>
-            <a href="https://wolt.com" target="_blank" rel="noopener noreferrer" class="chip-link">Wolt</a>
-            <a href="https://www.foodora.cz" target="_blank" rel="noopener noreferrer" class="chip-link">Foodora</a>
-          </div>
+          <article class="club-card club-games">
+            <div class="games-inner">
+              <span class="card-num">D // HERNÍ ARÉNA</span>
+              <h3>KULEČNÍK. ŠIPKY. FOTBÁLEK.</h3>
+              <p>Rozjeďte přátelský turnaj u stolu s kulečníkem, poměřte mušku na šipkách nebo to roztočte u stolního fotbálku. K tomu pravidelné hospodské kvízy a venkovní zahrádka.</p>
+              <div class="game-pills">
+                <span>🎱 Kulečník</span>
+                <span>🎯 Šipky</span>
+                <span>⚽ Fotbálek</span>
+                <span>🧠 Kvízové večery</span>
+                <span>🌿 Venkovní zahrádka</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Zábava & Prostory (Zelený Pilsner blok) -->
-    <section class="section section-games" id="zabava">
-      <img src="assets/logo-mark.png" alt="" class="games-watermark" aria-hidden="true">
-      <div class="container games-inner">
-        <div class="section-header reveal">
+    <!-- Tmavá interaktivní Menu Tabule -->
+    <section class="section-dark" id="tabule">
+      <div class="wrap">
+        <div class="board-header">
           <div>
-            <span class="eyebrow eyebrow-gold">Zábava &amp; Zázemí</span>
-            <h2 class="section-title">Víc než jen hospoda. Místo, kde večer žije.</h2>
+            <span class="eyebrow eyebrow-gold">02 // NA ČEPU &amp; Z KUCHYNĚ</span>
+            <h2>MENU TABULE POKR</h2>
           </div>
-          <p class="section-sub">
-            Nově upravené prostory dávají pohodovému posezení i přátelským turnajům úplně nový šmrnc.
-          </p>
+          <div class="board-controls">
+            <input type="search" id="menuSearch" placeholder="Hledat (např. burger, řízek, fokáč, pizza...)" aria-label="Hledat v menu">
+          </div>
         </div>
 
-        <div class="bento-grid">
-          <article class="bento-card bento-large reveal">
-            <img src="assets/catering-games.jpg" alt="Společenské prostory s cateringem, kulečníkem a fotbálkem">
-            <div class="bento-overlay">
-              <span class="bento-tag">Nové zázemí pro party</span>
-              <h3>Zrekonstruované prostory pro soukromé akce</h3>
-              <p>Narozeniny, firemní večírky, rozlučky i srazy ze školy. Připravíme uspořádání stolů, výčep i raut přesně podle vašich představ.</p>
-            </div>
-          </article>
+        <div class="board-tabs" role="tablist" aria-label="Kategorie na tabuli">
+          <button class="btab active" data-cat="all">Vše</button>
+          <button class="btab" data-cat="pivo">Na čepu ★</button>
+          <button class="btab" data-cat="pizza">Pizzy</button>
+          <button class="btab" data-cat="burgery">Burgery</button>
+          <button class="btab" data-cat="rizky">Řízky &amp; Maso</button>
+          <button class="btab" data-cat="fokace">Fokáče &amp; Chuťovky</button>
+        </div>
 
-          <article class="bento-card reveal">
-            <div class="bento-icon">🎱</div>
-            <h3>Kulečník</h3>
-            <p>Udržovaný stůl v příjemně nasvícené zóně pro klidnou partii u vychlazeného půllitru i menší turnaje s partou.</p>
-          </article>
+        <div class="board-list" id="boardList"></div>
 
-          <article class="bento-card reveal">
-            <div class="bento-icon">🎯</div>
-            <h3>Šipky</h3>
-            <p>Ideální parťák k pivu. Hoďte si s kamarády 501 double out nebo rozjeďte přátelskou výzvu během oslavy.</p>
-          </article>
-
-          <article class="bento-card reveal">
-            <div class="bento-icon">⚽</div>
-            <h3>Stolní fotbálek</h3>
-            <p>Rychlé souboje ve dvojicích, které spolehlivě rozproudí náladu v každé partě i na firemním teambuildingu.</p>
-          </article>
-
-          <article class="bento-card reveal">
-            <div class="bento-icon">🌿</div>
-            <h3>Venkovní zahrádka &amp; Kvízy</h3>
-            <p>V létě venkovní zahrádka s dětským pískovištěm, po celý rok oblíbené hospodské kvízy a příjemný personál. Psi vítáni.</p>
-          </article>
+        <div class="board-footer">
+          <span>* Ukázka stálé nabídky — aktuální ceny a speciály na pípě přímo v podniku.</span>
+          <div class="board-delivery">
+            <a href="https://wolt.com" target="_blank" rel="noopener noreferrer">Objednat přes Wolt ↗</a>
+            <a href="https://www.foodora.cz" target="_blank" rel="noopener noreferrer">Objednat přes Foodora ↗</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Catering & Poptávka akcí -->
-    <section class="section section-catering" id="catering">
-      <div class="container catering-layout">
-        <div class="catering-info reveal">
-          <span class="eyebrow">Catering &amp; Soukromé akce</span>
-          <h2 class="section-title">Uspořádejte akci u nás, nebo dovezeme catering až k vám</h2>
-          <p>
-            Plánujete narozeninovou oslavu, firemní večírek, rodinnou sešlost nebo sportovní posezení?
-            Postaráme se o kompletní pohoštění — od rautových prken s mini řízky a pečenými žebry,
-            přes čerstvé pizzy a domácí fokáče až po miniburgery a řízenou péči o pitný režim.
-          </p>
-
-          <ul class="catering-list">
-            <li><strong>Rautová prkna &amp; řízkové mísy:</strong> kuřecí a vepřové mini řízky, žebra, kolena, saláty a domácí dipy.</li>
-            <li><strong>Pizza &amp; Fokáč bar:</strong> čerstvě pečené pizzy a teplé rozmarýnové fokáče po celý večer.</li>
-            <li><strong>Mini burgery &amp; chuťovky:</strong> vyladěné pivní snacky, které hosté milují.</li>
-            <li><strong>Prostory jen pro vás:</strong> rezervace části nebo celé pivnice včetně kulečníku, šipek a fotbálku.</li>
-          </ul>
-
-          <div class="direct-contact-box">
-            <span>Potřebujete to domluvit hned?</span>
-            <a href="tel:+420608822342">+420 608 822 342</a>
-            <small>nebo <a href="mailto:info@pivnicepizzapokr.cz">info@pivnicepizzapokr.cz</a></small>
+    <!-- Světlý blok: Interaktivní Konfigurátor Catering & Akce -->
+    <section class="section-light" id="catering">
+      <div class="wrap">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">03 // CATERING &amp; SOUKROMÉ AKCE</span>
+            <h2>AKCE V NAŠICH PROSTORÁCH<br>NEBO CATERING K VÁM.</h2>
           </div>
+          <p class="section-note">
+            Narozeniny, firemní večírky, rozlučky i rodinná setkání. Naklikejte si představu a my připravíme nabídku na míru.
+          </p>
         </div>
 
-        <form class="catering-form reveal" id="cateringForm">
-          <h3>Nezávazná poptávka akce / cateringu</h3>
-          <p class="form-intro">Napište nám základní představu a ozveme se vám s konkrétním návrhem.</p>
-
-          <div class="form-row">
-            <label>
-              Typ poptávky
-              <select name="type" id="eventType">
-                <option value="Akce v prostorách POKR">Soukromá akce v prostorách POKR</option>
-                <option value="Catering mimo pivnici">Catering na vaši adresu</option>
-                <option value="Rezervace stolu / kulečníku">Rezervace stolu / větší skupiny</option>
-              </select>
-            </label>
-            <label>
-              Počet osob: <strong id="guestCountVal">25</strong>
-              <input type="range" name="guests" id="guestCount" min="6" max="100" value="25">
-            </label>
-          </div>
-
-          <div class="form-group">
-            <span class="group-label">Co by vás zajímalo?</span>
-            <div class="checkbox-pills">
-              <label><input type="checkbox" name="items" value="Řízkové mísy & maso" checked><span>Řízky &amp; masová prkna</span></label>
-              <label><input type="checkbox" name="items" value="Pizzy & fokáče" checked><span>Pizzy &amp; fokáče</span></label>
-              <label><input type="checkbox" name="items" value="Mini burgery"><span>Burgery / mini burgery</span></label>
-              <label><input type="checkbox" name="items" value="Kulečník, šipky, fotbálek"><span>Kulečník &amp; hry</span></label>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <label>
-              Vaše jméno
-              <input type="text" name="name" placeholder="Jan Novák" required>
-            </label>
-            <label>
-              Telefon nebo e-mail
-              <input type="text" name="contact" placeholder="+420 777 123 456" required>
-            </label>
-          </div>
-
-          <label>
-            Termín a poznámka
-            <textarea name="note" rows="3" placeholder="Předběžné datum, čas a případná přání..."></textarea>
-          </label>
-
-          <button type="submit" class="btn btn-crimson btn-full">Připravit poptávku</button>
-          <div class="form-result" id="formResult" hidden></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Kontakt & Mapa -->
-    <section class="section section-contact" id="kontakt">
-      <div class="container contact-grid">
-        <div class="contact-card reveal">
-          <span class="eyebrow">Kde nás najdete</span>
-          <h2 class="section-title">Stavte se na jedno (nebo na pizzu)</h2>
-
-          <div class="contact-details">
-            <div>
-              <h4>Adresa</h4>
-              <p>Pivnice Pizza POKR<br>Pod Soudním vrchem 2567/3<br>669 02 Znojmo</p>
-            </div>
-            <div>
-              <h4>Otevírací doba</h4>
-              <ul class="hours-list">
-                <li><span>Pondělí – Čtvrtek</span><strong>15:00 – 01:00</strong></li>
-                <li><span>Pátek – Sobota</span><strong>15:00 – 03:00</strong></li>
-                <li><span>Neděle</span><strong>15:00 – 01:00</strong></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Kontakt &amp; Rezervace</h4>
-              <p>
-                <a href="tel:+420608822342">+420 608 822 342</a><br>
-                <a href="tel:+420774487441">+420 774 487 441</a><br>
-                <a href="mailto:info@pivnicepizzapokr.cz">info@pivnicepizzapokr.cz</a>
-              </p>
-            </div>
-            <div>
-              <h4>Sledujte nás</h4>
-              <div class="social-row">
-                <a href="https://www.facebook.com/pivnicepokrznojmo" target="_blank" rel="noopener noreferrer" class="chip-link chip-link-green">Facebook @pivnicepokrznojmo</a>
+        <div class="config-layout">
+          <div class="config-photo">
+            <img src="assets/catering-games.jpg" alt="Cateringové prkno s žebry, řízky, pizzou a fokáči">
+            <div class="config-badge">
+              <img src="assets/logo-mark.png" alt="" aria-hidden="true">
+              <div>
+                <strong>Kompletní servis</strong>
+                <span>Jídlo • Výčep • Kulečník • Šipky • Fotbálek</span>
               </div>
             </div>
           </div>
 
-          <div class="amenities">
+          <div class="config-box">
+            <div class="step-block">
+              <span class="step-label">1. Kde bude akce probíhat?</span>
+              <div class="toggle-group" id="venueGroup">
+                <button type="button" class="toggle-btn active" data-val="V prostorách Pivnice POKR">V prostorách POKR (včetně her)</button>
+                <button type="button" class="toggle-btn" data-val="Catering na vlastní adresu">Catering s dovozem k vám</button>
+              </div>
+            </div>
+
+            <div class="step-block">
+              <span class="step-label">2. Co chcete na stůl? (vyberte více)</span>
+              <div class="station-grid" id="stationGrid">
+                <button type="button" class="station-btn active" data-station="Řízkové mísy & pečená žebra">Řízky &amp; žebra</button>
+                <button type="button" class="station-btn active" data-station="Čerstvé pizzy & teplé fokáče">Pizzy &amp; fokáče</button>
+                <button type="button" class="station-btn" data-station="Mini burgery & hranolky">Burgery</button>
+                <button type="button" class="station-btn" data-station="Čepované pivo (Hvězda sládků) & bar">Výčep &amp; bar</button>
+              </div>
+            </div>
+
+            <div class="step-block">
+              <span class="step-label">3. Počet hostů &amp; kontakt</span>
+              <form id="clubForm" class="club-form">
+                <div class="club-form-row">
+                  <input type="number" name="guests" min="6" max="120" value="30" required aria-label="Počet osob">
+                  <input type="text" name="name" placeholder="Vaše jméno" required>
+                </div>
+                <div class="club-form-row">
+                  <input type="text" name="contact" placeholder="Telefon nebo e-mail" required>
+                  <input type="text" name="date" placeholder="Předběžný termín">
+                </div>
+                <button type="submit" class="cta-btn cta-ember cta-full">Sestavit nezávaznou poptávku</button>
+              </form>
+              <div class="config-result" id="configResult" hidden></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section-dark section-contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow eyebrow-gold">04 // KONTAKT &amp; KUDY K NÁM</span>
+          <h2>STAVTE SE DO POKRU.</h2>
+          <p class="big-addr">Pod Soudním vrchem 2567/3<br>669 02 Znojmo</p>
+
+          <div class="info-table">
+            <div>
+              <span>PO – ČT &amp; NE</span>
+              <strong>15:00 – 01:00</strong>
+            </div>
+            <div>
+              <span>PÁ – SO</span>
+              <strong>15:00 – 03:00</strong>
+            </div>
+            <div>
+              <span>TELEFON</span>
+              <strong><a href="tel:+420608822342">+420 608 822 342</a> / <a href="tel:+420774487441">774 487 441</a></strong>
+            </div>
+            <div>
+              <span>E-MAIL</span>
+              <strong><a href="mailto:info@pivnicepizzapokr.cz">info@pivnicepizzapokr.cz</a></strong>
+            </div>
+            <div>
+              <span>FACEBOOK</span>
+              <strong><a href="https://www.facebook.com/pivnicepokrznojmo" target="_blank" rel="noopener noreferrer">@pivnicepokrznojmo ↗</a></strong>
+            </div>
+          </div>
+
+          <div class="badges-row">
             <span>Platba kartou</span>
-            <span>Wi-Fi zdarma</span>
-            <span>Venkovní zahrádka</span>
+            <span>Wi-Fi</span>
+            <span>Zahrádka &amp; pískoviště</span>
             <span>Bezbariérový vstup</span>
             <span>Psi vítáni</span>
           </div>
         </div>
 
-        <div class="map-card reveal">
+        <div class="map-frame">
           <iframe
             title="Mapa – Pivnice Pizza POKR Znojmo"
             src="https://www.openstreetmap.org/export/embed.html?bbox=16.0385%2C48.8548%2C16.0545%2C48.8628&amp;layer=mapnik&amp;marker=48.8588%2C16.0465"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
           </iframe>
-          <a class="map-link" href="https://mapy.cz/zakladni?q=Pod%20Soudn%C3%ADm%20vrchem%202567%2F3%2C%20Znojmo" target="_blank" rel="noopener noreferrer">
-            Otevřít navigaci v Mapy.cz →
+          <a href="https://mapy.cz/zakladni?q=Pod%20Soudn%C3%ADm%20vrchem%202567%2F3%2C%20Znojmo" target="_blank" rel="noopener noreferrer" class="map-footer-link">
+            OTEVŘÍT V MAPY.CZ →
           </a>
         </div>
       </div>
@@ -394,17 +350,24 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo-white.png" alt="POKR Pivnice-Pizza" class="footer-logo">
-        <p>Pivnice &amp; Pizzerie ve Znojmě • Hvězda sládků • Catering &amp; Soukromé akce</p>
+    <div class="wrap footer-row">
+      <div class="footer-left">
+        <img src="assets/logo-white.png" alt="POKR Pivnice-Pizza">
+        <span>Pivnice Pizza POKR • Znojmo</span>
       </div>
-      <div class="footer-meta">
-        <span>Návrh verze 3 — Pilsner Edition (Styl V1 × Barvy V2)</span>
-        <span>© <span id="year"></span> Pivnice Pizza POKR</span>
+      <div class="footer-right">
+        <span>Návrh verze 3 — Industrial Taproom &amp; Club</span>
+        <span>© <span id="year"></span></span>
       </div>
     </div>
   </footer>
+
+  <!-- Mobilní spodní lišta -->
+  <div class="mobile-bar">
+    <a href="tel:+420608822342">Zavolat</a>
+    <a href="#tabule">Menu</a>
+    <a href="#catering" class="mobile-bar-accent">Akce / Catering</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
