@@ -1,6 +1,6 @@
-# Pivnice Pizza POKR — Verze 3 (Industrial Taproom & Pizza Club)
+# Pivnice Pizza POKR — Verze 3 (Pilsner Edition: Styl V1 × Barvy V2)
 
-Výrazný moderní koncept v kontrastní černé, světlé a oranžovo-zlaté paletě s dynamickým tickerem, interaktivní vyhledávací menu tabulí (pivo s Hvězdou sládků, pizzy, burgery, řízky, fokáče), prezentací zrekonstruovaného zázemí (kulečník, šipky, fotbálek) a naklikávacím konfigurátorem pro catering a soukromé akce.
+Sloučení struktury, obsahu, typografie (`Fraunces` + `Plus Jakarta Sans`) a celkového ztvárnění **Verze 1** s barevným laděním **Pilsner Urquell** (hluboká pivovarská zelená, čistá krémová/bílá, zlaté odlesky a červené detaily) vycházejícím z **Verze 2**.
 
 - **Web / Projekt:** `pivnicepizzapokr.cz`
 - **Nasazení:** Statický web připravený k okamžitému nasazení na Vercel.
